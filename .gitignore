@@ -1,0 +1,19 @@
+# Secrets / local config
+.env
+
+# Data (don't commit the raw dataset)
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Power BI
+*.pbix
+
+# OS
+.DS_Store
+Thumbs.db
