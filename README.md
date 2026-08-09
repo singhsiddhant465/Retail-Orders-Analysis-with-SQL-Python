@@ -82,11 +82,22 @@ discount-impact, top-states, and segment/ship-mode breakdowns.
 
 ## Power BI Dashboard
 
-The dashboard connects **live to SQL Server** (`retail.dbo.orders`) and presents:
+The dashboard connects **live to SQL Server** (`retail.dbo.orders`) and presents three pages:
 
-- **Executive Overview** — KPI cards (sales, profit, margin %, YoY growth), a 2022-vs-2023 monthly trend, and sales by region / category / segment.
-- **Product & Category Deep Dive** — top-10 products, top-5 per region, best month per category, and sub-category growth.
-- **Operations** — ship-mode performance and a discount-vs-profit scatter.
+### Executive Overview
+KPI cards (sales, profit, margin %, YoY growth), a 2022-vs-2023 monthly trend, and sales by region / category / segment.
+
+![Executive Overview page](images/dashboard-overview.png)
+
+### Product & Category Deep Dive
+Top-10 products, top-5 per region, best month per category, and sub-category growth.
+
+![Product and Category Deep Dive page](images/dashboard-product-category.png)
+
+### Operations
+Ship-mode performance and a discount-vs-profit scatter.
+
+![Operations page](images/dashboard-operations.png)
 
 Full build instructions (connection steps, DAX measures, page-by-page layout) are in
 **[POWERBI_DASHBOARD_GUIDE.md](POWERBI_DASHBOARD_GUIDE.md)**.
@@ -134,6 +145,7 @@ Retail-Orders-Analytics/
 ├── etl_pipeline.py             # Extract → clean → engineer → load to SQL Server
 ├── analysis_queries.sql        # 9 analytical T-SQL queries
 ├── POWERBI_DASHBOARD_GUIDE.md  # Power BI build guide (connection, DAX, layout)
+├── images/                     # dashboard screenshots used in this README
 ├── requirements.txt
 ├── .env.example                # template for connection settings
 ├── .gitignore
